@@ -28,6 +28,7 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           PYTHONIOENCODING: utf-8
+          TZ: Asia/Seoul
         run: python 올리기/인스타_올리기.py "${{ inputs.mode }}" "${{ inputs.folder }}"
       - name: 올린 기록 저장
         if: inputs.mode == '올리기'
